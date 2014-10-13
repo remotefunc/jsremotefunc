@@ -23,11 +23,8 @@ function remotejs(serverurl){
             for(var i = 0; i < arguments.length; i++){
                 arr[i] = arguments[i];
             }
-            var invocation = {
-                "Function": name,
-                "Parameters": arr
-            }
-            return http("POST", "/", invocation);
+
+            return http("POST", ("/" + name), arr);
         }
     }
 
